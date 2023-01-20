@@ -378,6 +378,7 @@ select.list-dt:focus {
 .for-last-span > p{
   font-weight: 700;
   font-size: 0.8em;
+  margin-top: 1em;
 }
 /* #bold{
 } */

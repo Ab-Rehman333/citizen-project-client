@@ -3,6 +3,7 @@
 function toggle1() {
     var card = document.getElementById('card');
     card.classList.toggle("active");
+
 }
 
 
@@ -24,7 +25,8 @@ function target1(a, b) {
         var left1 = aa.getBoundingClientRect().left;
 
         ab.style.opacity = "1";
-
+        let getCard = document.querySelector(".card1");
+        getCard.style.opacity = "1"
         ab.style.top = top1 - ct + "px";
         ab.style.left = left1 - cl + "px";
         ab.style.width = right1 + "px";
@@ -48,6 +50,8 @@ function write1(a, b) {
         card.classList.add("active");
         var ll = document.getElementById("pointer");
         ll.style.opacity = 0;
+        let getCard = document.querySelector(".card1");
+        getCard.style.opacity = "0"
     } else {
         var card = document.getElementById('card');
         card.classList.remove("active");
@@ -69,7 +73,9 @@ function write1(a, b) {
 }
 function write8() {
     var card = document.getElementById('card');
-        card.classList.remove("active");
+    card.classList.remove("active");
+    let getCard = document.querySelector(".card1");
+    getCard.style.opacity = "1"
 }
 function star1(b) {
     var st1 = document.querySelectorAll(".label");
@@ -152,7 +158,7 @@ function local() {
     localStorage.setItem("cardNumber", cardNumber);
     localStorage.setItem("Name", holderName);
 
-   
+
     return;
 }
 
@@ -161,7 +167,7 @@ function letsChange(e) {
     let cvvNumber = document.getElementById("cvvNumber");
     let mainInputCvv = document.getElementById("mainInputCvv").value;
     cvvNumber.value = mainInputCvv;
-   
+
 
 }
 
@@ -245,3 +251,4 @@ function cvvValid() {
 
     }
 }
+

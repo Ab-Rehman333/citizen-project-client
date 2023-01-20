@@ -179,7 +179,6 @@ select.list-dt {
   border-bottom: 1px solid #ccc;
   padding: 2px 5px 3px 5px;
   margin: 2px;
-  -webkit-appearance: none;
 }
 
 select.list-dt:focus {
@@ -331,7 +330,20 @@ select.list-dt:focus {
   top: 50%;
   right: 50%;
 }
-
+.iti__country.iti__highlight {
+  background-color: rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.iti__country {
+  padding: 5px 10px;
+  outline: none;
+  display: flex;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
 
 input[type="number"],
 input[type="text"],
