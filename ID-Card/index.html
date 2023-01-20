@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+
+<body>
+    <header class="red-background">
+        <div class="container">
+            <div class="logo-header">
+                <img src="images/CTZ_Green-01.png" alt="">
+        </div>
+        </div>
+    </header>
+    <!-- MultiStep Form -->
+    <div class="container-fluid" id="grad1">
+        <div class="row justify-content-center mt-0">
+            <div class="col-12 col-sm-9 col-md-7 col-lg-6 text-center p-0 mb-2">
+                <div class="card px-0 pt-4 pb-4">
+                    <div class="col-md-12 mx-0">
+                        <form id="msform">
+                            <!-- progressbar -->
+                            <ul id="progressbar">
+                                <li class="active" id="account">
+                                    <strong>Account</strong>
+                                </li>
+                                <li id="personal" class="active"><strong>Payment</strong></li>
+                                <li id="payment" class="active"><strong>Billing</strong></li>
+                                <li id="profile" class="active"><strong>Profile</strong></li>
+                                <li id="confirm"><strong>Finish</strong></li>
+                            </ul>
+                            <div class="for-one-profile">
+                                <h2><strong>Verify Your Profile Details</strong></h2>
+                                <p class="para">
+                                    For Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit. Similique, illo. Nemo recusandae architecto
+                                </p>
+                            </div>
+                            <div class="for-main-profile">
+                                <!-- =================== this is first passport section  ====================== -->
+                                <div class="for-first-profile">
+                                    <h2><strong>Upload YOur Selfie</strong></h2>
+                                    <p class="para">
+                                        For Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    </p>
+                                    <div class="main-start">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-log-4 col-md-4 col-sm-6">
+                                                    <img src="images/card.png" alt="">
+                                                    <div class="for-label-id">
+                                                        <label>Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Culpa, maiores!
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-log-4 col-md-4 col-sm-6">
+                                                    <img src="images/face.png" alt="">
+
+                                                    <div class="for-label-id">
+                                                        <label>Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Culpa, maiores!
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-log-4 col-md-4 col-sm-6">
+                                                   <img src="images/hand.png" alt="">
+                                                    <div class="for-label-id">
+                                                        <label>Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Culpa, maiores!
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="contianer">
+                                            <div id="dragger_wrapper">
+                                                <div id="dragger">
+                                                    <h2 id="drag-text">Drag and Drop File</h2>
+                                                    <h3>Or</h3>
+                                                    <i class="fa-solid fa-cloud-arrow-down download-icon "
+                                                        id="browseFile"></i>
+                                                    <input type="file" accept=".png, .jpg, .jpeg" id="gallery-photo-add"
+                                                        style="display:none;" />
+                                                </div>
+                                                <div id="fileName"> </div>
+                                            </div>
+                                            <div class="gallery"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="button-main"><a href="#" type="submit" class="action-button-one"
+                                        onclick="dislayBlock()">Continue</a></div> 
+                                </div>
+                                <div class="for-first-profile-second">
+                                    <h2><strong>Upload YOur Passport</strong></h2>
+                                    <p class="para">
+                                        For Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    </p>
+                                    <div class="main-start">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-log-4 col-md-4 col-sm-6">
+                                                    <img src="images/card.png" class="id-first" alt="">
+                                                    <div class="for-label-id">
+                                                        <label>Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Culpa, maiores!
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-log-4 col-md-4 col-sm-6">
+                                                    <img src="images/double.png" class="id-first" alt="">
+
+                                                    <div class="for-label-id">
+                                                        <label>Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Culpa, maiores!
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-log-4 col-md-4 col-sm-6">
+                                                    <img src="images/hand.png" class="id-first" alt="">
+
+                                                    <div class="for-label-id">
+                                                        <label>Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Culpa, maiores!
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="contianer">
+                                            <div id="dragger_wrapper4">
+                                                <div id="dragger4">
+                                                    <h2 id="drag-text4">Drag and Drop File</h2>
+                                                    <h3>Or</h3>
+                                                    <i class="fa-solid fa-cloud-arrow-down download-icon "
+                                                        id="browseFile4"></i>
+                                                    <input type="file4" accept=".png, .jpg, .jpeg" multiple
+                                                        id="gallery-photo-add4" style="display:none;" />
+                                                </div>
+                                                <div id="fileName4"> </div>
+                                            </div>
+                                            <div class="gallery4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  National id section  -->
+                                <div class="for-second-profile">
+                                    <h2><strong>Upload YOur  National Id</strong></h2>
+                                    <p class="para">
+                                        For Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    </p>
+                                    <div class="main-start">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-log-4 col-md-4 col-sm-6">
+                                                    <img src="images/card.png" class="id-first" alt="">
+                                                    <div class="for-label-id">
+                                                        <label>Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Culpa, maiores!
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-log-4 col-md-4 col-sm-6">
+                                                  <img src="images/double.png" class="id-first" alt="">
+                                                    <div class="for-label-id">
+                                                        <label>Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Culpa, maiores!
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-log-4 col-md-4 col-sm-6">
+                                                    <img src="images/hand.png" class="id-first" alt="">
+
+                                                    <div class="for-label-id">
+                                                        <label>Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Culpa, maiores!
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="contianer">
+                                            <div id="dragger_wrapper2">
+                                                <div id="dragger_wrapper2">
+                                                    <div id="dragger2">
+
+                                                        <h2 id="drag-text2">Drag and Drop File</h2>
+                                                        <h3>Or</h3> <i
+                                                            class="fa-solid fa-cloud-arrow-down download-icon "
+                                                            id="browseFile2"></i> <input type="file"
+                                                            accept=".png, .jpg, .jpeg" id="gallery-photo-add2"
+                                                            style="display:none;" /><br>
+                                                    </div>
+                                                    <div id="fileName2"> </div>
+                                                </div>
+                                                <div class="gallery2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="button-main"><a href="#" type="submit" class="action-button-two"
+                                        onclick="dislayBlockTwo()">continur</a></div> 
+                                </div>
+                                <div class="for-second-profile-second">
+                                    <h2><strong>Upload YOur Selfie</strong></h2>
+                                    <p class="para">
+                                        For Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    </p>
+                                    <div class="main-start">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-log-4 col-md-4 col-sm-6">
+                                                    <img src="images/camera.png" class="id-first" alt="">
+                                                    <div class="for-label-id">
+                                                        <label>Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Culpa, maiores!
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-log-4 col-md-4 col-sm-6">
+                                                    <img src="images/face.png" class="id-first" alt="">
+
+                                                    <div class="for-label-id">
+                                                        <label>Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Culpa, maiores!
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-log-4 col-md-4 col-sm-6">
+                                                    <img src="images/hand.png" class="id-first" alt="">
+                                                    <div class="for-label-id">
+                                                        <label>Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Culpa, maiores!
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="contianer">
+                                            <div id="dragger_wrapper5">
+                                                <div id="dragger_wrapper5">
+                                                    <div id="dragger5">
+                                                        <h2 id="drag-text5">Drag and Drop File</h2>
+                                                        <h3>Or</h3> <i
+                                                            class="fa-solid fa-cloud-arrow-down download-icon "
+                                                            id="browseFile5"></i> <input type="file"
+                                                            accept=".png, .jpg, .jpeg" multiple id="gallery-photo-add5"
+                                                            style="display:none;" /><br>
+                                                    </div>
+                                                    <div id="fileName5"> </div>
+                                                </div>
+                                                <div class="gallery5"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ============== third Driving  ==================== -->
+                                <div class="for-third-profile">
+                                    <h2><strong>Upload YOur Dirving lisense</strong></h2>
+                                    <p class="para">
+                                        For Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    </p>
+                                    <div class="main-start">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-log-4 col-md-4 col-sm-6">
+                                                    <img src="images/card.png" class="id-first" alt="">
+                                                    <div class="for-label-id">
+                                                        <label>Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Culpa, maiores!
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-log-4 col-md-4 col-sm-6">
+                                                    <img src="images/double.png" class="id-first" alt="">
+                                                    <div class="for-label-id">
+                                                        <label>Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Culpa, maiores!
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-log-4 col-md-4 col-sm-6">
+                                                    <img src="images/hand.png" class="id-first" alt="">
+                                                    <div class="for-label-id">
+                                                        <label>Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Culpa, maiores!
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="contianer">
+                                            <div id="dragger_wrapper3">
+                                                <div id="dragger3">
+                                                    <h2 id="drag-text3">Drag and Drop File</h2>
+                                                    <h3>Or</h3>
+                                                    <i class="fa-solid fa-cloud-arrow-down download-icon "
+                                                        id="browseFile3"></i> <input type="file"
+                                                        accept=".png, .jpg, .jpeg" multiple id="gallery-photo-add3"
+                                                        style="display:none;" />
+                                                </div>
+                                                <div id="fileName3"> </div>
+                                            </div>
+                                            <div class="gallery3"></div>
+                                        </div>
+                                    </div>
+                                    <div class="button-main"><a href="#" type="submit" class="action-button-three"
+                                        onclick="dislayBlockThree()">Continue</a></div> 
+                                </div>
+                            </div>
+                            <div class="for-third-profile-second">
+                                <h2><strong>Upload YOur Dirving Selfie</strong></h2>
+                                <p class="para">
+                                    For Lorem ipsum, dolor sit amet consectetur adipisicing
+                                </p>
+                                <div class="main-start">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-log-4 col-md-4 col-sm-6">
+                                                <img src="images/camera.png" class="id-first" alt="">
+                                                <div class="for-label-id">
+                                                    <label>Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Culpa, maiores!
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-log-4 col-md-4 col-sm-6">
+                                                <img src="images/face.png" class="id-first" alt="">
+
+                                                <div class="for-label-id">
+                                                    <label>Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Culpa, maiores!
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-log-4 col-md-4 col-sm-6">
+                                                <img src="images/hand.png" class="id-first" alt="">
+
+                                                <div class="for-label-id">
+                                                    <label>Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Culpa, maiores!
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contianer">
+                                        <div id="dragger_wrapper6">
+                                            <div id="dragger6">
+                                                <h2 id="drag-text6">Drag and Drop File</h2>
+                                                <h3>Or</h3>
+                                                <i class="fa-solid fa-cloud-arrow-down download-icon "
+                                                    id="browseFile6"></i> <input type="file" accept=".png, .jpg, .jpeg"
+                                                    multiple id="gallery-photo-add6" style="display:none;" />
+                                            </div>
+                                            <div id="fileName6"> </div>
+                                        </div>
+                                        <div class="gallery6"></div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- =============================== its a main  first section ========================  -->
+                    <div class="ID-card">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-log-4 col-md-4 col-sm-6">
+                                    <img src="images/passport.png" class="id-first" alt="">
+                                    <div class="for-radio">
+                                        <input type="radio" id="passport" name="same" />
+                                        <label>Passport</label>
+                                    </div>
+                                </div>
+                                <div class="col-log-4 col-md-4 col-sm-6">
+                                    <img src="images/nat.png" class="id-first" alt="">
+                                    <div class="for-radio">
+                                        <input type="radio" id="national" name="same" />
+                                        <label>National ID</label>
+                                    </div>
+                                </div>
+                                <div class="col-log-4 col-md-4 col-sm-6">
+                                    <img src="images/card.png" class="id-first" alt="">
+                                    <div class="for-radio">
+                                        <input type="radio" id="driving" name="same" />
+                                        <label>Driving Lisense</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-main"><a href="#" type="submit" class="action-button-next" onclick="locationChange()">Continue</a></div> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+
+    <script>
+        function locationChange() {
+            window.location.assign("../Done/index.html");
+        }
+
+
+    </script>
+</body>
+
+</html>
