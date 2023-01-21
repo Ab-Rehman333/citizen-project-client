@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+body{
+  overflow-x: hidden;
+}
 .button-main{
   margin-top: 2em;
 }
@@ -354,7 +357,7 @@ select.list-dt:focus {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-radius: 20px;
+  border-radius: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,9 +365,20 @@ select.list-dt:focus {
   transition: 0.5s;
 }
 
+@media (min-width:1650px) {
+  .ui-card{
+    width: 50%;
+  }
+}
+@media (min-width:1750px) {
+  .ui-card{
+    width: 43%;
+  }
+}
+
 @media only screen and (max-width:1540px) {
   .ui-card {
-    width: 65%;
+    width: 60%;
   }
   /* #pointer {
   
@@ -377,7 +391,7 @@ select.list-dt:focus {
 
 @media only screen and (max-width:1270px) {
   .ui-card {
-    width: 75%;
+    width: 74%;
   }
   /* #pointer {
     width: 95% !important;
@@ -388,7 +402,7 @@ select.list-dt:focus {
 
 @media only screen and (max-width:1090px) {
   .ui-card {
-    width: 83%;
+    width: 78%;
   }
 
 }
@@ -415,7 +429,7 @@ select.list-dt:focus {
 
 @media only screen and (max-width:430px) {
   .ui-card {
-    width: 96%;
+    width: 100%;
   }
   /* #pointer {
   
@@ -454,9 +468,9 @@ select.list-dt:focus {
 }
 
 .ui-card .imgs {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -473,7 +487,7 @@ select.list-dt:focus {
   align-items: center;
   flex-direction: row;
   padding: 7px 0;
-  margin-bottom: 20px;
+  margin-bottom: 6px;
   flex-wrap: wrap;
   z-index: 10;
 }

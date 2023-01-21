@@ -97,9 +97,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
   
-  <script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initAutocomplete&libraries=places&v=weekly"
-  defer></script>
+  <!-- <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM049YGZVjO0rHqJ-Hwo6MdLO_2IxhMHw&callback=initAutocomplete&libraries=places&v=weekly"
+  defer></script> -->
 
   <script>
 
@@ -119,16 +119,16 @@
         "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
     });
 
-    function getIp(callback) {
-      fetch('https://ipinfo.io/json?', { headers: { 'Accept': 'application/json' } })
-        .then((resp) => resp.json())
-        .catch(() => {
-          return {
-            country: 'us',
-          };
-        })
-        .then((resp) => callback(resp.country));
-    }
+    // function getIp(callback) {
+    //   fetch('https://ipinfo.io/json?', { headers: { 'Accept': 'application/json' } })
+    //     .then((resp) => resp.json())
+    //     .catch(() => {
+    //       return {
+    //         country: 'us',
+    //       };
+    //     })
+    //     .then((resp) => callback(resp.country));
+    // }
 
   </script>
 </body>

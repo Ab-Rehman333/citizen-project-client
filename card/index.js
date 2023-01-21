@@ -144,11 +144,6 @@ window.addEventListener("contextmenu", (e) => {
     e.preventDefault();
 })
 
-// var add_cc = document.getElementById("add_cc");
-// add_cc.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     location.reload();
-// })
 
 
 // save to localStorage
@@ -172,19 +167,6 @@ function letsChange(e) {
 }
 
 
-//  //    for loading
-//  $("body").append(
-//     '<div  class="loader-container"><img src="images/loading.png" /></div>'
-//   );
-//   $(window).on("load", function () {
-//     setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
-//   });
-//   function removeLoader() {
-//     $(".loader-container").fadeOut(500, function () {
-//       // fadeOut complete. Remove the loading div
-//       $(".loader-container").remove(); //makes page more lightweight
-//     });
-//   }
 
 
 function cNumberV() {
